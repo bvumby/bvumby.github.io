@@ -1,0 +1,44 @@
+<div class="container-wrapper">
+  <div class="container">
+    <div class="heading">
+      <p id="what-1">What are you</p>
+      <p id="here-1">here to do ?</p>
+    </div>
+    <div slickContainer #slickController="slick" [slickConfig]="config">
+      <ng-container *ngIf="slickController.initialize">
+        <div slickItem *ngFor="let data of carouselData" class="card">
+          <img src="{{ data.url }}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <div class="title">
+              <h4>{{ data.title }}</h4>
+            </div>
+            <div slickCenter class="start-text">
+              <p>
+                START HERE<fa-icon
+                  id="right-chevron"
+                  [icon]="faChevronRight"
+                ></fa-icon>
+              </p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="arrows">
+      <fa-icon
+        id="left-arrow"
+        (click)="slickController.prev()"
+        [icon]="faArrowCircleLeft"
+      ></fa-icon>
+      <fa-icon
+        id="right-arrow"
+        (click)="slickController.next()"
+        [icon]="faArrowCircleRight"
+      ></fa-icon>
+    </div>
+    <!-- <pre>
+  config: {{ config | json }}
+</pre> -->
+  </div>
+</div>

@@ -1,0 +1,120 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+body {
+  margin: 0;
+  padding: 0;
+}
+.heading {
+  position: absolute;
+  left: 40%;
+  top: 0%;
+}
+p#what-1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: lighter;
+}
+p#here-1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+.container-wrapper {
+  margin-top: 85px;
+}
+.title {
+  text-align: center;
+  margin-top: 20px;
+}
+.start-text {
+  text-align: center;
+  margin-top: 90px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.card.slick-slide.slick-current.slick-active.slick-center {
+  background-color: black;
+  color: white;
+  width: 350px !important;
+  margin-top: 0px;
+  border-bottom: 6px solid #ffa500;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.card.slick-slide.slick-cloned.slick-active .start-text {
+  display: none !important;
+}
+.card.slick-slide.slick-cloned .start-text {
+  display: none;
+}
+.card.slick-slide .start-text {
+  display: none;
+}
+.card.slick-slide.slick-current.slick-active.slick-center .start-text {
+  display: grid;
+}
+.card.slick-slide.slick-current.slick-active.slick-center .title {
+  margin-top: 50px;
+}
+.card.slick-slide {
+  width: 225px !important;
+  margin-top: 85px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 7%);
+  border: none;
+}
+
+fa-icon#right-arrow:hover {
+  color: #ffa500;
+}
+fa-icon#right-chevron {
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.arrows {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    display: none;
+  }
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .heading {
+    position: absolute;
+    left: 25%;
+    top: 11%;
+  }
+  p#what-1 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: lighter;
+  }
+  p#here-1 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  fa-icon#left-arrow {
+    font-size: 30px;
+    position: absolute;
+    left: 29%;
+    margin-top: -70px;
+  }
+  fa-icon#left-arrow:hover {
+    color: #ffa500;
+  }
+  fa-icon#right-arrow {
+    font-size: 30px;
+    margin-top: -70px;
+    position: absolute;
+    left: 68%;
+  }
+  .arrows {
+    display: grid !important;
+  }
+}
